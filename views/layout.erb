@@ -5,13 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Rumblr</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="/main.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="/main.css" />
 </head>
 <body>
-  <div class="camera">
-    <center><img class="camerapic" "c.jpeg"></center>
-  </div>
+  
   <br>
   <br>
   <br>
@@ -29,12 +27,15 @@
         </a>
         HI <%= @user.email %>
       <% else %>
-        <a href="/login" class="ui primary button">
+       <div class="pic">
+         
+        <a href="./login" class="ui primary button">
           Login
         </a>
-        <a href="/signup" class="ui primary button">
+        <a href="./signup" class="ui primary button">
           Sign Up
         </a>
+        </div>
       <% end %>
       <br>
       <br>

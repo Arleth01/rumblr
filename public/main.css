@@ -2,12 +2,18 @@ h1 {
   text-align: center;
   font-family: sans-serif;
 }
-.camera{
-  background-image: url("c.jpeg");
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: 0% 50%;
-  height: 500px;
-  width: auto;
- }
+.pic{
+  background: url('t.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 200%;
+  min-width: 1024px;
+	
+  width: 100%;
+  height: auto;
+	
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+ 
 
