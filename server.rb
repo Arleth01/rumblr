@@ -61,10 +61,9 @@ post '/users/login' do
   end 
 end 
   
-# app.get('/logout', function(req, res){
-#   req.logout();
-#   res.redirect('/');
-#   }); 
+post '/logout' do 
+  
+  
 post '/users/signup' do
   User.create(email: params[:email], firstname: params[:firstname], lastname: params[:lastname], password:
   params[:password], )
