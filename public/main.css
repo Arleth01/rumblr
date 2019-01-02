@@ -3,7 +3,7 @@ h1 {
   font-family: sans-serif;
 }
 .pic{
-  background: url('t.jpeg') no-repeat center center fixed;
+  background: url('p.jpeg') no-repeat center center fixed;
   background-size: cover;
   min-height: 200%;
   min-width: 1024px;

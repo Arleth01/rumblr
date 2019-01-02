@@ -1,3 +1,3 @@
 class Post <ActiveRecord::Base 
-    # belong_to :activity 
+    belongs_to :user 
 end 

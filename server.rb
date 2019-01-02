@@ -40,6 +40,10 @@ get '/login' do
   erb :login
 end
 
+get '/logout' do 
+  erb :logout
+end 
+
 post '/users/login' do
   user = User.find_by(email: params["email"], password:
   params["password"])
@@ -50,7 +54,11 @@ post '/users/login' do
     redirect '/'
   end 
 end 
-
+  
+# app.get('/logout', function(req, res){
+#   req.logout();
+#   res.redirect('/');
+#   }); 
 post '/users/signup' do
   User.create(email: params[:email], firstname: params[:firstname], lastname: params[:lastname], password:
   params[:password], )

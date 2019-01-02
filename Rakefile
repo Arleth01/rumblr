@@ -28,7 +28,9 @@ DatabaseTasks.root = root
 
 task :environment do
   ActiveRecord::Base.configurations = DatabaseTasks.database_configuration
-  ActiveRecord::Base.establish_connection DatabaseTasks.env.to_sym
+  ActiveRecord::Base.establish_connection ENV['DATABASE_URL'] ||
+DatabaseTask.env.to_sym
 end
+
 
 load 'active_record/railties/databases.rake'
