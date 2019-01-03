@@ -50,19 +50,24 @@ get '/logout' do
   erb :logout
 end 
 
+get '/post' do 
+  erb :post
+end 
+
 post '/users/login' do
   user = User.find_by(email: params["email"], password: params["password"])
   if user 
     session[:user_id] = user.id 
-    redirect '/all'
+    redirect '/post'
   else 
-    redirect '/'
+    redirect '/signup'
   end 
 end 
   
   
 post '/users/signup' do
   User.create(email: params[:email], firstname: params[:firstname], lastname: params[:lastname], password:
-  params[:password])
+  params[:password]) 
+  redirect '/post'
 end 
 
