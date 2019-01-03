@@ -51,8 +51,7 @@ get '/logout' do
 end 
 
 post '/users/login' do
-  user = User.find_by(email: params["email"], password:
-  params["password"])
+  user = User.find_by(email: params["email"], password: params["password"])
   if user 
     session[:user_id] = user.id 
     redirect '/all'
@@ -61,12 +60,9 @@ post '/users/login' do
   end 
 end 
   
-post '/logout' do 
-  
   
 post '/users/signup' do
   User.create(email: params[:email], firstname: params[:firstname], lastname: params[:lastname], password:
-  params[:password], )
+  params[:password])
 end 
 
-binding.pry
